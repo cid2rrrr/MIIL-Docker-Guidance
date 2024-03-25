@@ -154,6 +154,9 @@ https://filezilla-project.org
 
     docker cp [피일명] [컨테이너ID]:[내부경로]
 
+VS Code 서버 연결
+---------
+(작성예정)
 
 \
 \
