@@ -113,6 +113,11 @@ bash tab 대소문자 무시
     내부에서: exit
     외부에서: docker stop [이름]
 
+### 로컬 파일 서버로 복사
+
+#### 추후 갱신 예정
+https://filezilla-project.org
+
 ### container 외부파일 복사
 
     docker cp [피일명] [컨테이너ID]:[내부경로]
