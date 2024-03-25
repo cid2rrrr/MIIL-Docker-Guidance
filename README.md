@@ -4,7 +4,10 @@ Container Guide
 Container 설치
 ---------
 
+#### !!!아래 내용은 torch 1.10 + CUDA 11.3 을 예시로 들고 있음!!!
+
 ### 1. 연구에 중심으로 사용 될 라이브러리의 권장 환경 확인
+
 ##### 예시이미지\) detectron2 설치를 위한 documentation 내용
 ![Alt 환경](./img/1.png)
 
