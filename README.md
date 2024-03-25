@@ -26,7 +26,7 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
 [참조] https://github.com/NVIDIA/nvidia-docker/wiki/CUDA#description
 
 ### 3. CLI 환경 (Terminal cmd 등)에서 서버 접속 (VPN 필요)
-    ssh [계정]@114.110.130.222
+    ssh [계정]@114.110.***.***
 
 ### 4. 복사한 명령어 붙여넣기로 이미지 다운로드
 
@@ -46,51 +46,83 @@ Tab으로 자동완성 가능 \
 
 
 ### 7. CUDA 확인
-    python
+    $ python
 
     >>> import torch
     >>> torch.cuda.is_available()
     >>> True    # true 출력 확인
  
 
+Pytorch Docker Image를 사용하였을 경우 아래 내용을 필수로 진행하여야 함
 
 
 ### [선택] Linux 환경 정리
 
-패키지 업데이트, vim, git 설치 
->   apt-get install sudo -y \
-sudo apt update \
-sudo apt upgrade \
-sudo apt-get install vim git -y
+#### 패키지 업데이트, vim, git 설치 
 
-vim 환경 세팅 저장
+    apt-get install sudo -y
+    sudo apt update
+    sudo apt upgrade
+    sudo apt-get install vim git pip wget -y
+
+#### vim 환경 세팅 저장
 ###### set 내용 복사 및 저장
 
->   vi ~/.vimrc
->   >   set number \
-set ai \
-set si \
-set cindent \
-set shiftwidth=4\
-set expandtab\
-set tabstop=4\
-set softtabstop=4\
-set ignorecase\
-set hlsearch\
-set nocompatible\
-set autoindent\
-set ruler\
-set showmatch\
-syntax on
+    $ vi ~/.vimrc
+
+    set number
+    set ai
+    set si
+    set cindent
+    set shiftwidth=4
+    set expandtab
+    set tabstop=4
+    set softtabstop=4
+    set ignorecase
+    set hlsearch
+    set nocompatible
+    set autoindent
+    set ruler
+    set showmatch
+    syntax on
 
 
-bash tab 대소문자 무시
+#### bash tab 대소문자 무시
 ###### set 내용 복사 및 저장
->   sudo vi /etc/inputrc
->   >   set completion-ignore-case on
 
+    $ sudo vi /etc/inputrc
 
+    set completion-ignore-case on
 
+#### conda 설치
+
+###### 선택1) Anaconda 설치 (작성자 추천)
+https://www.anaconda.com/download 링크 하단에서 다운로드 링크 복사
+![Alt LinuxInstall](./img/5.png)
+
+    # for anaconda
+    wget [Shift+Insert / Ctril+V]
+
+###### 선택2) miniconda 설치
+    # for miniconda
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+###### 선택3) Miniforge 설치
+https://github.com/conda-forge/miniforge/?tab=readme-ov-file 링크 중 Download 탭
+![Alt miniforge](./img/6.png)
+
+    # for miniforge
+    wget [Shift+Insert / Ctrl+V]
+
+이후 공통
+
+    chmod +x [다운로드한 파일]
+    ./[다운로드한 파일] -bu
+
+    #After Installation
+    conda init
+
+설치 후 컨테이너 종료 후 재실행 필수
 
 
 
