@@ -33,8 +33,15 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
     OSX : Ctrl+V
     Windows : Shift+Insert
 
+### 5. 이미지 다운로드 확인
+
+    docker images
+
+![Alt 이미지확인](./img/4.png)
+
 ### 5. 컨테이너 생성 및 실행
     docker run -it --gpus all --name [컨테이너 이름] [레포지토리]:[태그] /bin/bash
+Tab으로 자동완성 가능 \
 [옵션 참조] https://docs.docker.com/reference/cli/docker/container/run/
 
 
