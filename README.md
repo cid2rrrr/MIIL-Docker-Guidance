@@ -39,13 +39,13 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
 
 ![Alt 이미지확인](./img/4.png)
 
-### 5. 컨테이너 생성 및 실행
+### 6. 컨테이너 생성 및 실행
     docker run -it --gpus all --name [컨테이너 이름] [레포지토리]:[태그] /bin/bash
 Tab으로 자동완성 가능 \
 [옵션 참조] https://docs.docker.com/reference/cli/docker/container/run/
 
 
-### 6. CUDA 확인
+### 7. CUDA 확인
     python
 
     >>> import torch
