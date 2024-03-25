@@ -136,3 +136,4 @@ https://greeksharifa.github.io/references/2021/06/21/Docker/
 
 ######    v1.0 &nbsp; &nbsp; &nbsp; 24.03.20 &nbsp;&nbsp; 최초 생성
 ######    v1.1 &nbsp; &nbsp; &nbsp; 24.03.20 &nbsp;&nbsp; 내용 수정
+######    v1.2 &nbsp; &nbsp; &nbsp; 24.03.25 &nbsp;&nbsp; docker images 등 내용 추가
