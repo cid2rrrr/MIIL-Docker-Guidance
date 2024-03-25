@@ -30,14 +30,15 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
 
 ### 4. 복사한 명령어 붙여넣기로 이미지 다운로드
 
-    OSX : Ctrl+V / Windows : Shift+Insert 후 Enter
+    OSX : Ctrl+V
+    Windows : Shift+Insert
 
-### 4. 컨테이너 생성 및 실행
+### 5. 컨테이너 생성 및 실행
     docker run -it --gpus all --name [컨테이너 이름] [레포지토리]:[태그] /bin/bash
 [옵션 참조] https://docs.docker.com/reference/cli/docker/container/run/
 
 
-### 5. CUDA 확인
+### 6. CUDA 확인
     python
 
     >>> import torch
