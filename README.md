@@ -28,7 +28,9 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
 ### 3. CLI 환경 (Terminal cmd 등)에서 서버 접속 (VPN 필요)
     ssh [계정]@114.110.130.222
 
+### 4. 복사한 명령어 붙여넣기로 이미지 다운로드
 
+    OSX : Ctrl+V / Windows : Shift+Insert 후 Enter
 
 ### 4. 컨테이너 생성 및 실행
     docker run -it --gpus all --name [컨테이너 이름] [레포지토리]:[태그] /bin/bash
