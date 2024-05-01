@@ -60,6 +60,8 @@ Pytorch Docker Image를 사용하였을 경우 아래 내용을 필수로 진행
 
 #### 패키지 업데이트, vim, git 설치 
 
+    apt update
+    apt upgrade
     apt-get install sudo -y
     sudo apt update
     sudo apt upgrade
