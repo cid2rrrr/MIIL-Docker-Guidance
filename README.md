@@ -63,9 +63,8 @@ Pytorch Docker Image를 사용하였을 경우 아래 내용을 필수로 진행
     apt update
     apt upgrade
     apt-get install sudo -y
-    sudo apt update
-    sudo apt upgrade
-    sudo apt-get install vim git pip wget -y
+    sudo apt-get install vim git wget -y
+    sudo apt-get install python3-pip -y
 
 #### vim 환경 세팅 저장
 ###### set 내용 복사 및 저장
@@ -174,3 +173,4 @@ https://greeksharifa.github.io/references/2021/06/21/Docker/
 ######    v1.0 &nbsp; &nbsp; &nbsp; 24.03.20 &nbsp;&nbsp; 최초 생성
 ######    v1.1 &nbsp; &nbsp; &nbsp; 24.03.20 &nbsp;&nbsp; 내용 수정
 ######    v1.2 &nbsp; &nbsp; &nbsp; 24.03.25 &nbsp;&nbsp; docker images 등 내용 추가
+######    v1.3 &nbsp; &nbsp; &nbsp; 24.04.01 &nbsp;&nbsp; apt-get 내용 수정
