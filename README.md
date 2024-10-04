@@ -40,9 +40,19 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
 ![Alt 이미지확인](./img/4.png)
 
 ### 6. 컨테이너 생성 및 실행
-    docker run -it --gpus all --name [컨테이너 이름] [레포지토리]:[태그] /bin/bash
+    docker run -it --gpus all --name -v [호스트 시스템 디렉토리]:[컨테이너 디렉토리] [컨테이너 이름] [레포지토리]:[태그] /bin/bash
 Tab으로 자동완성 가능 \
 [옵션 참조] https://docs.docker.com/reference/cli/docker/container/run/
+
+#### 이미 만들어진 컨테이너에 볼륨 마운트
+
+기본적으로 생성된 컨테이너에 호스트 볼륨을 마운트하는 것이 불가능하기 때문에 복사해서 새로 만들어줘야 함
+    
+    docker commit [컨테이너 이름 or ID] [새로운 이미지 이름]
+    docker run -d --name [새로운 컨테이너 이름] -v [호스트 시스템 디렉토리]:[컨테이너 디렉토리] [새로운 이미지 이름]
+
+
+
 
 
 ### 7. CUDA 확인
@@ -174,3 +184,4 @@ https://greeksharifa.github.io/references/2021/06/21/Docker/
 ######    v1.1 &nbsp; &nbsp; &nbsp; 24.03.20 &nbsp;&nbsp; 내용 수정
 ######    v1.2 &nbsp; &nbsp; &nbsp; 24.03.25 &nbsp;&nbsp; docker images 등 내용 추가
 ######    v1.3 &nbsp; &nbsp; &nbsp; 24.04.01 &nbsp;&nbsp; apt-get 내용 수정
+######    v1.4 &nbsp; &nbsp; &nbsp; 24.10.04 &nbsp;&nbsp; docker volume mount 추가
