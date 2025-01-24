@@ -40,7 +40,7 @@ base, runtime, devel 중 원하는 환경 선택 **(runtime 권장)**
 ![Alt 이미지확인](./img/4.png)
 
 ### 6. 컨테이너 생성 및 실행
-    docker run -it --gpus all --name -v [호스트 시스템 디렉토리]:[컨테이너 디렉토리] [컨테이너 이름] [레포지토리]:[태그] /bin/bash
+    docker run -it --gpus all --name [컨테이너 이름] -v [호스트 시스템 디렉토리]:[컨테이너 디렉토리] [레포지토리]:[태그] /bin/bash
 Tab으로 자동완성 가능 \
 [옵션 참조] https://docs.docker.com/reference/cli/docker/container/run/
 
@@ -70,11 +70,8 @@ Pytorch Docker Image를 사용하였을 경우 아래 내용을 필수로 진행
 
 #### 패키지 업데이트, vim, git 설치 
 
-    apt update
-    apt upgrade
-    apt-get install sudo -y
-    sudo apt-get install vim git wget -y
-    sudo apt-get install python3-pip -y
+    apt-get update && apt-get upgrade -y && apt-get install sudo vim git wget python3-pip -y
+    
 
 #### vim 환경 세팅 저장
 ###### set 내용 복사 및 저장
@@ -185,3 +182,4 @@ https://greeksharifa.github.io/references/2021/06/21/Docker/
 ######    v1.2 &nbsp; &nbsp; &nbsp; 24.03.25 &nbsp;&nbsp; docker images 등 내용 추가
 ######    v1.3 &nbsp; &nbsp; &nbsp; 24.04.01 &nbsp;&nbsp; apt-get 내용 수정
 ######    v1.4 &nbsp; &nbsp; &nbsp; 24.10.04 &nbsp;&nbsp; docker volume mount 추가
+######    v1.5 &nbsp; &nbsp; &nbsp; 25.01.24 &nbsp;&nbsp; docker 명령어 일부 수정
